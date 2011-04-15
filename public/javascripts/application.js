@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
     $(this).append('<li class="loading"></li>');
   });
 
-  $('ul').bind('infinitescroll.finish', function(e) {
+  $('ul').bind('infinitescroll.finish', function() {
     console.log('finish');
     $('li.loading').hide();
   });
