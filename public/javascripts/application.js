@@ -4,10 +4,12 @@ jQuery(document).ready(function($) {
     url: window.location.href,
     appendTo: '#feed',
     triggerAt: 620,
+    fade: 'slow'
   });
   
   var feed = $('#feed');
-  
+  feed.hide();
+  feed.delay(2000).fadeIn('slow');
   // display loading animation
   feed.bind('infinitescroll.beforesend', function() {
     $(this).append('<li class="loading"></li>');
@@ -15,6 +17,7 @@ jQuery(document).ready(function($) {
   
   // hide loading animation
   feed.bind('infinitescroll.finish', function() {
-    $('li.loading').fadeOut('fast');
+    $('li.loading').fadeOut('slow');
+    $('li.loading').slideUp('slow');
   });
 });
