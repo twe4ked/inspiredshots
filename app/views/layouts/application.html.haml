@@ -3,12 +3,13 @@
 %head
   %title InspiredShots
   = stylesheet_link_tag :all
-  = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js', 'jquery.infinitescroll.js', 'application'
+  = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js', 'jquery.infinitescroll.js', 'application', 'view'
 %body
-  %h1 InspiredShots
-  %p Infinitely scrolling dribbble.
-  %ul= yield
-  %footer
-    Created by #{link_to 'Odin Dutton', 'http://odindutton.com/'}.
-/ Ruby Dribbble API wrapper by Jeremy Weiskotten (http://github.com/jeremyw/swish)
-/ jQuery infinite scroll plugin by Brian Lopez (http://github.com/brianmario/jquery-infinite-scroll)
+  #content
+    %h1#title InspiredShots
+    %h4#subtitle &rarr; Infinitely scrolling <a href='http://dribbble.com'>dribbble</a>
+    %ul#feed= yield
+    %footer
+      Created by #{link_to 'Odin Dutton', 'http://odindutton.com/'}
+  / Ruby Dribbble API wrapper by Jeremy Weiskotten (http://github.com/jeremyw/swish)
+  / jQuery infinite scroll plugin by Brian Lopez (http://github.com/brianmario/jquery-infinite-scroll)

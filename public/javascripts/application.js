@@ -1,16 +1,20 @@
 jQuery(document).ready(function($) {
+  
   $(window).infinitescroll({
     url: window.location.href,
-    appendTo: 'ul'
+    appendTo: '#feed',
+    triggerAt: 620,
   });
-
-  $('ul').bind('infinitescroll.beforesend', function(e) {
-    console.log('beforesend');
+  
+  var feed = $('#feed');
+  
+  // display loading animation
+  feed.bind('infinitescroll.beforesend', function() {
     $(this).append('<li class="loading"></li>');
   });
-
-  $('ul').bind('infinitescroll.finish', function() {
-    console.log('finish');
-    $('li.loading').hide();
+  
+  // hide loading animation
+  feed.bind('infinitescroll.finish', function() {
+    $('li.loading').fadeOut('fast');
   });
 });
