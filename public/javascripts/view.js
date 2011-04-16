@@ -27,5 +27,8 @@ function generateNoise(opacity) {
 }  
 $(function() {
 	generateNoise(.05); // default opacity is .2 
+	$('#title').lettering();
 }) 
+  
+  
   

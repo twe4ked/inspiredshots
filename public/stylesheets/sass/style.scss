@@ -25,7 +25,7 @@ body{color:#8d8d8e;background:#111415;width:400px;margin:40px auto;font:12px/140
 a:link, a:visited, a:hover, a:active{color:#2B899D;}
 
 // -- Header -------------------------------------------------------------------
-#title{font-size:61px;margin-bottom:40px;color:#ea4c89;text-shadow:1px -1px 0px #fc629d;font-weight:bold;}
+#title{font-size:62px;margin-bottom:40px;color:#ea4c89;text-shadow:1px -1px 0px #fc629d;font-weight:bold; letter-spacing: -0.005em;}
 #subtitle{font-size:21px;margin-bottom:30px;text-transform:lowercase;font-weight:normal; 
   font-family:'Palatino', 'Times New Roman', serif;text-align:right;text-shadow: 1px -1px 0px #000;}
 
@@ -48,4 +48,46 @@ ul#feed{
 // -- Footer -------------------------------------------------------------------
 footer{text-align:right; position: fixed; bottom: 10px; right: 20px;
   a{color:#aaa;}
+}
+
+
+// -- Kerning --------
+#title .char9 {
+	margin-left: 0px
+}
+#title .char7 {
+	margin-left: 1px
+}
+#title .char8 {
+	margin-left: 0px
+}
+#title .char4 {
+	margin-left: 0px
+}
+#title .char6 {
+	margin-left: -1px
+}
+#title .char10 {
+	margin-left: 0px
+}
+#title .char11 {
+	margin-left: -1px
+}
+#title .char12 {
+	margin-left: 0px
+}
+#title .char3 {
+	margin-left: -1px
+}
+#title .char2 {
+	margin-left: -2px
+}
+#title .char5 {
+	margin-left: -1px
+}
+#title .char13 {
+	margin-left: 2px
+}
+#title .char1 {
+	margin-left: 0px
 }
