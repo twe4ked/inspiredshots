@@ -1,2 +1,2 @@
 - @shots.each do |shot|
-  %li= link_to (image_tag shot.image_url), shot.url, :title => shot.player.name
+  %li= link_to image_tag(shot.image_url, :width => 400, :height => 300), shot.url, :title => shot.player.name
